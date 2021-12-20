@@ -1,2 +1,2 @@
 # eth-kickstart
-Ethereum smart contract and Next.js frontend for a kickstarter clone
+Solidity smart contract and Next.js (React) frontend for a decentralized Kickstarter clone using the Ethereum Blockchain.
