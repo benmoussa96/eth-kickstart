@@ -65,20 +65,6 @@ contract Campaign {
         newRequest.approvalCount = 0;
     }
 
-    // function createRequest(string memory description, uint value, address recipient) public restricted {
-    //     Request memory newRequest = Request({
-    //         description: description,
-    //         value: value,
-    //         recipient: recipient,
-    //         complete: false,
-    //         approvalCount: 0
-    //     });
-
-    //     Request(description, value, recipient, false); // Based on order of params, do not use bc order can change
-
-    //     requests.push(newRequest);
-    // }
-
     function approveRequest(uint256 index) public {
         Request storage request = requests[index];
 
