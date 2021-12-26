@@ -1,13 +1,14 @@
 import React from 'react'
+import { Container } from 'semantic-ui-react'
+import Header from './Header'
 
 function Layout({ children }) {
     return (
-        <div>
-            <h1>Header</h1>
+        <Container>
+            <Header />
             {children}
-            <h1>Footer</h1>
-        </div>
-    );
-};
+        </Container>
+    )
+}
 
-export default Layout;
+export default Layout
