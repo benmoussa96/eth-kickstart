@@ -1,13 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Card, Button } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css'
+import Layout from '../components/Layout'
 import factory from '../ethereum/factory';
 
-export default () => {
-    useEffect(async () => {
-        const campaigns = await factory.methods.getDeplyedCampaigns().call();
-        console.log(campaigns);
+function Index({ campaigns }) {
+    return (
+        <Layout>
+            <div>
+                <h3>Open Campaigns</h3>
+                {renderCampaigns(campaigns)}
+                <Button content="Create campaign" icon="add" primary />
+            </div>
+        </Layout>
+    );
+};
+
+const renderCampaigns = (campaigns) => {
+    const items = campaigns.map(address => {
+        return {
+            header: address,
+            description: <a>View Campaign</a>,
+            fluid: true
+        }
     });
 
-    return (
-        <h1>Index pute</h1>
-    );
-}
+    return <Card.Group items={items} />;
+};
+
+Index.getInitialProps = async () => {
+    const campaigns = await factory.methods.getDeplyedCampaigns().call();
+    return { campaigns };
+};
+
+export default Index;
