@@ -5,6 +5,22 @@ import Layout from '../components/Layout'
 import factory from '../ethereum/factory'
 
 function CampaignIndex({ campaigns }) {
+    const renderCampaigns = (campaigns) => {
+        const items = campaigns.map(address => {
+            return {
+                header: address,
+                description: (
+                    <Link route={`/campaigns/${address}`}>
+                        <a>View Campaign</a>
+                    </Link>
+                ),
+                fluid: true
+            }
+        })
+
+        return <Card.Group items={items} />
+    }
+
     return (
         <Layout>
             <div>
@@ -16,22 +32,6 @@ function CampaignIndex({ campaigns }) {
             </div>
         </Layout>
     )
-}
-
-const renderCampaigns = (campaigns) => {
-    const items = campaigns.map(address => {
-        return {
-            header: address,
-            description: (
-                <Link route={`/campaigns/${address}`}>
-                    <a>View Campaign</a>
-                </Link>
-            ),
-            fluid: true
-        }
-    })
-
-    return <Card.Group items={items} />
 }
 
 CampaignIndex.getInitialProps = async () => {
