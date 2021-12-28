@@ -1,35 +1,29 @@
 import React, { useState } from 'react'
 import { Menu } from 'semantic-ui-react'
+import { Link } from '../routes'
 
 function Header() {
     const [activeItem, setActiveItem] = useState('crowdcoin')
 
     return (
         <Menu style={{ marginTop: '20px' }}>
-            <Menu.Item
-                name='crowdcoin'
-                active={activeItem === 'crowdcoin'}
-                onClick={event => { setActiveItem('crowdcoin') }}
-            >
-                Crowdcoin
-            </Menu.Item>
+            <Link route="/">
+                <a className="item">
+                    CrowdCoin
+                </a>
+            </Link>
 
             <Menu.Menu position='right'>
-                <Menu.Item
-                    name='campaigns'
-                    active={activeItem === 'campaigns'}
-                    onClick={event => { setActiveItem('campaigns') }}
-                >
-                    Campaigns
-                </Menu.Item>
-
-                <Menu.Item
-                    name='add'
-                    active={activeItem === 'add'}
-                    onClick={event => { setActiveItem('add') }}
-                >
-                    +
-                </Menu.Item>
+                <Link route="/">
+                    <a className="item">
+                        Campaigns
+                    </a>
+                </Link>
+                <Link route="/campaigns/new">
+                    <a className="item">
+                        +
+                    </a>
+                </Link>
             </Menu.Menu>
         </Menu>
     )
