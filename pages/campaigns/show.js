@@ -1,9 +1,10 @@
 import React from 'react'
-import { Card, Grid } from 'semantic-ui-react'
+import { Card, Grid, Button } from 'semantic-ui-react'
 import Layout from '../../components/Layout'
 import ContributeForm from '../../components/ContributeForm'
 import Campaign from '../../ethereum/campaign'
 import web3 from '../../ethereum/web3'
+import { Link } from '../../routes'
 
 function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsCount, approversCount, manager }) {
     const renderSummary = () => {
@@ -29,10 +30,10 @@ function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsC
                 meta: 'Number of approvers'
             },
             {
-                header: manager.substring(0, 20) + ' ...',
+                header: manager,
                 description: 'The manager created this campaign and can create requests to withdraw money.',
                 meta: 'Address of the manager',
-                // style: { overflowWrap: 'break-word' }
+                style: { overflowWrap: 'break-word' }
             }
         ]
 
@@ -43,12 +44,23 @@ function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsC
         <Layout>
             <h3>Campaign Summary</h3>
             <Grid>
-                <Grid.Column width={12}>
-                    {renderSummary()}
-                </Grid.Column>
-                <Grid.Column width={4}>
-                    <ContributeForm address={campaignAddress} />
-                </Grid.Column>
+                <Grid.Row>
+                    <Grid.Column width={12}>
+                        {renderSummary()}
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <ContributeForm address={campaignAddress} />
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Link route={`/campaigns/${campaignAddress}/requests`}>
+                            <a>
+                                <Button primary>View Requests</Button>
+                            </a>
+                        </Link>
+                    </Grid.Column>
+                </Grid.Row>
             </Grid>
         </Layout>
     )

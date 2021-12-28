@@ -32,7 +32,7 @@ function ContributeForm({ address }) {
     }
 
     return (
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} error={!!errorMessage}>
             <Form.Field>
                 <label>Amount to contribute</label>
                 <Input
