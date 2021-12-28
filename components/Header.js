@@ -3,6 +3,7 @@ import { Menu } from 'semantic-ui-react'
 
 function Header() {
     const [activeItem, setActiveItem] = useState('crowdcoin')
+
     return (
         <Menu style={{ marginTop: '20px' }}>
             <Menu.Item

@@ -1,10 +1,9 @@
 import React from 'react'
 import { Card, Button } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
 import Layout from '../components/Layout'
 import factory from '../ethereum/factory'
 
-function Index({ campaigns }) {
+function CampaignIndex({ campaigns }) {
     return (
         <Layout>
             <div>
@@ -28,9 +27,9 @@ const renderCampaigns = (campaigns) => {
     return <Card.Group items={items} />
 }
 
-Index.getInitialProps = async () => {
+CampaignIndex.getInitialProps = async () => {
     const campaigns = await factory.methods.getDeplyedCampaigns().call()
     return { campaigns }
 }
 
-export default Index
+export default CampaignIndex
