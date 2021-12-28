@@ -39,7 +39,6 @@ function CampaignNew() {
                 <Form.Field>
                     <label>Minimum Contribution</label>
                     <Input
-                        placeholder='Minimum Contribution'
                         label="wei"
                         labelPosition="right"
                         value={minimum}
@@ -53,7 +52,7 @@ function CampaignNew() {
                     content={errorMessage}
                 />
 
-                <Button type='submit' primary loading={loading}>Create</Button>
+                <Button type="submit" primary loading={loading}>Create</Button>
             </Form>
         </Layout>
     )

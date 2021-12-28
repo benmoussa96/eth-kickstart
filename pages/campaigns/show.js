@@ -5,7 +5,7 @@ import ContributeForm from '../../components/ContributeForm'
 import Campaign from '../../ethereum/campaign'
 import web3 from '../../ethereum/web3'
 
-function CampaignhSow({ minimumContribution, balance, requestsCount, approversCount, manager }) {
+function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsCount, approversCount, manager }) {
     const renderSummary = () => {
         const items = [
             {
@@ -32,8 +32,7 @@ function CampaignhSow({ minimumContribution, balance, requestsCount, approversCo
                 header: manager.substring(0, 20) + ' ...',
                 description: 'The manager created this campaign and can create requests to withdraw money.',
                 meta: 'Address of the manager',
-                style: { overflowWrap: 'break-word' }
-                // fluid: true
+                // style: { overflowWrap: 'break-word' }
             }
         ]
 
@@ -48,7 +47,7 @@ function CampaignhSow({ minimumContribution, balance, requestsCount, approversCo
                     {renderSummary()}
                 </Grid.Column>
                 <Grid.Column width={4}>
-                    <ContributeForm />
+                    <ContributeForm address={campaignAddress} />
                 </Grid.Column>
             </Grid>
         </Layout>
@@ -58,7 +57,9 @@ function CampaignhSow({ minimumContribution, balance, requestsCount, approversCo
 CampaignhSow.getInitialProps = async (props) => {
     const campaign = Campaign(props.query.address);
     const summary = await campaign.methods.getSummary().call();
+
     return {
+        campaignAddress: props.query.address,
         minimumContribution: summary[0],
         balance: summary[1],
         requestsCount: summary[2],
