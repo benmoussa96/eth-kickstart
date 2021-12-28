@@ -44,6 +44,30 @@ contract Campaign {
         minimumContribution = minimum;
     }
 
+    function getSummary()
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            address
+        )
+    {
+        return (
+            minimumContribution,
+            address(this).balance,
+            requestsCount,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestsCount() public view returns (uint256) {
+        return requestsCount;
+    }
+
     function contribute() public payable {
         require(msg.value > minimumContribution);
 
