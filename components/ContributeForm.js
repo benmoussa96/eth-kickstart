@@ -6,6 +6,7 @@ import { Router } from '../routes'
 
 function ContributeForm({ address }) {
     const [value, setValue] = useState('');
+
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
 

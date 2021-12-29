@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button, Header } from 'semantic-ui-react'
 import { Link } from '../routes'
 import Layout from '../components/Layout'
 import factory from '../ethereum/factory'
@@ -23,13 +23,13 @@ function CampaignIndex({ campaigns }) {
 
     return (
         <Layout>
-            <div>
-                <h3>Open Campaigns</h3>
-                <Link route="/campaigns/new">
-                    <a><Button content="Create campaign" icon="add" floated="right" primary /></a>
-                </Link>
-                {renderCampaigns(campaigns)}
-            </div>
+            <Header as='h3'>
+                Open Campaigns
+            </Header>
+            <Link route="/campaigns/new">
+                <a><Button content="Create campaign" icon="add" floated="right" primary /></a>
+            </Link>
+            {renderCampaigns(campaigns)}
         </Layout>
     )
 }

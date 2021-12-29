@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Grid, Button } from 'semantic-ui-react'
+import { Card, Grid, Button, Header } from 'semantic-ui-react'
 import Layout from '../../components/Layout'
 import ContributeForm from '../../components/ContributeForm'
 import Campaign from '../../ethereum/campaign'
@@ -42,7 +42,16 @@ function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsC
 
     return (
         <Layout>
-            <h3>Campaign Summary</h3>
+            <Header as='h3'>
+                Campaign Summary
+                <Header.Subheader>
+                    <Link route={`/campaigns/${campaignAddress}`}>
+                        <a>
+                            {campaignAddress}
+                        </a>
+                    </Link>
+                </Header.Subheader>
+            </Header>
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={12}>

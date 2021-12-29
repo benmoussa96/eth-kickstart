@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Input, Message } from 'semantic-ui-react'
+import { Button, Form, Input, Message, Header } from 'semantic-ui-react'
 import { Router } from '../../routes'
 import Layout from '../../components/Layout'
 import factory from '../../ethereum/factory'
@@ -7,6 +7,7 @@ import web3 from '../../ethereum/web3'
 
 function CampaignNew() {
     const [minimum, setMinimum] = useState('');
+
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -34,7 +35,9 @@ function CampaignNew() {
 
     return (
         <Layout>
-            <h3>Create a Campaign</h3>
+            <Header as='h3'>
+                Create a Campaign
+            </Header>
             <Form onSubmit={onSubmit} error={!!errorMessage}>
                 <Form.Field>
                     <label>Minimum Contribution</label>
