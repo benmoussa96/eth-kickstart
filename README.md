@@ -29,14 +29,17 @@ This full stack decentralized application was built in context of the Udemy cour
 ### Installing
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/benmoussa96/eth-kickstart.git
    ```
 2. Change into repo root directory
+
     ```
     cd eth-kickstart
     ```
 3. Install dependencies
+
     ```
     npm install
     ```
@@ -44,14 +47,17 @@ This full stack decentralized application was built in context of the Udemy cour
 ### Compiling and deploying new contract (optional)
 
 4. Change into ethereum directory
+
     ```
     cd ethereum
     ```
 5. Compile the contract
+
     ```
     node compile.js
     ```
 6. Deploy the contract
+
     ```
     node deploy.js
     ```
@@ -62,10 +68,12 @@ This full stack decentralized application was built in context of the Udemy cour
 ### Executing program
 
 8. Change into repo root directory
+
     ```
     cd ../
     ```
 9. Run the Next.js client
+
     ```
     npm run dev
     ```
