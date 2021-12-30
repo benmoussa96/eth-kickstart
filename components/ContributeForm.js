@@ -29,6 +29,7 @@ function ContributeForm({ address }) {
             setErrorMessage(err.message);
         }
 
+        setValue('');
         setLoading(false);
     }
 
@@ -37,7 +38,7 @@ function ContributeForm({ address }) {
             <Form.Field>
                 <label>Amount to contribute</label>
                 <Input
-                    label="ether"
+                    label="ETH"
                     labelPosition="right"
                     value={value}
                     onChange={event => { setValue(event.target.value) }}

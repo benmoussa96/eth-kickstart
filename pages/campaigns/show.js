@@ -10,12 +10,12 @@ function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsC
     const renderSummary = () => {
         const items = [
             {
-                header: web3.utils.fromWei(balance, 'ether'),
+                header: web3.utils.fromWei(balance, 'ether') + ' ETH',
                 description: 'The balance is how much money this campaign has to spend.',
                 meta: 'Campaign balance (ether)'
             },
             {
-                header: minimumContribution,
+                header: minimumContribution + ' wei',
                 description: 'You must contribute this much wei to become an approver.',
                 meta: 'Minimum contribution (wei)'
             },
