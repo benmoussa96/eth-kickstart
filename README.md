@@ -41,7 +41,7 @@ This full stack decentralized application was built in context of the Udemy cour
     npm install
     ```
 
-### Compiling and deploying new contract
+### Compiling and deploying new contract (optional)
 
 4. Change into ethereum directory
     ```
@@ -55,8 +55,8 @@ This full stack decentralized application was built in context of the Udemy cour
     ```
     node deploy.js
     ```
-7. Copy the Factory address and paste in the /eth-kickstart/ethereum/factory.js file
-![alt text](https://github.com/benmoussa96/eth-kickstart/blob/master/factory.png?raw=true)
+7. Copy the Factory address and paste in `/eth-kickstart/ethereum/factory.js`
+![Factory address](https://github.com/benmoussa96/eth-kickstart/blob/master/images/factory.png?raw=true)
 
 ### Executing program
 
@@ -64,11 +64,19 @@ This full stack decentralized application was built in context of the Udemy cour
     ```
     cd ../
     ```
-9. Run the Next.js frontend
+9. Run the Next.js client
     ```
     npm run dev
     ```
-10. Go to localhost:3000
+10. Go to `localhost:3000`
+
+![List of campaigns](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaigns-list.png?raw=true)
+
+
+![Summary of campaign](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaign-summary.png?raw=true)
+
+
+![Requests of a campaign](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaign-requests.png?raw=true)
 
 ## Authors
 
