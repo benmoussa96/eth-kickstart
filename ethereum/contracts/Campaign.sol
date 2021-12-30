@@ -64,10 +64,6 @@ contract Campaign {
         );
     }
 
-    function getRequestsCount() public view returns (uint256) {
-        return requestsCount;
-    }
-
     function contribute() public payable {
         require(msg.value > minimumContribution);
 

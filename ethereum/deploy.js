@@ -13,7 +13,7 @@ const web3 = new Web3(provider);
 
 const deploy = async () => {
     const accounts = await web3.eth.getAccounts();
-    console.log('Deploying with account address:', accounts[0]);
+    console.log('Deploying Factory contract with account address:', accounts[0]);
 
     const result = await new web3.eth.Contract(interface)
         .deploy({
@@ -24,6 +24,6 @@ const deploy = async () => {
             from: accounts[0]
         });
 
-    console.log('Contract deployed to address:', result.options.address);
+    console.log('Factory address:', result.options.address);
 };
 deploy();
