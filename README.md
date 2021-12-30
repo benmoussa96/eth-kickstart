@@ -80,13 +80,13 @@ This full stack decentralized application was built in context of the Udemy cour
 10. Go to `localhost:3000`
 
 
-List of campaigns
+* List of campaigns
 ![List of campaigns](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaigns-list.png?raw=true)
 
-Summary of a campaign
+* Summary of a campaign
 ![Summary of a campaign](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaign-summary.png?raw=true)
 
-Requests for a campaign
+* Requests for a campaign
 ![Requests for a campaign](https://github.com/benmoussa96/eth-kickstart/blob/master/images/campaign-requests.png?raw=true)
 
 ## Authors
