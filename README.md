@@ -4,7 +4,7 @@ Solidity smart contract and Next.js (React) frontend for a decentralized Kicksta
 ## Description
 
 This full stack decentralized application was built in context of the Udemy course [Ethereum and Solidity The Complete Developer's Guide](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/).
-* Backend: (eth-kickstart/ethereum/)
+* Backend: (eth-kickstart/ethereum)
     Campaign.sol Solidity smart contract compiled with solc and deployed to the Ethereum blockchain with WEB3.
     Tested using mocha and ganache-cli.
 * Frontend: (eth-kickstrat/pages)
@@ -24,7 +24,7 @@ This full stack decentralized application was built in context of the Udemy cour
 
 ### Dependencies
 
-* [Metamask](https://metamask.io) Extension installed in chrome.
+* [Metamask](https://metamask.io) extension installed in chrome.
 
 ### Installing
 
@@ -34,7 +34,7 @@ This full stack decentralized application was built in context of the Udemy cour
    ```
 2. Change into repo root directory
     ```
-    cd blog
+    cd eth-kickstart
     ```
 3. Install dependencies
     ```
@@ -55,7 +55,8 @@ This full stack decentralized application was built in context of the Udemy cour
     ```
     node deploy.js
     ```
-7. Copy the Factory address and paste in the eth-kickstart/ethereum/factory.js file
+7. Copy the Factory address and paste in the /eth-kickstart/ethereum/factory.js file
+![alt text](https://github.com/benmoussa96/eth-kickstart/factory.png?raw=true)
 
 ### Executing program
 
