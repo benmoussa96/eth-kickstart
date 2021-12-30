@@ -8,7 +8,7 @@ This full stack decentralized application was built in context of the Udemy cour
     Campaign.sol Solidity smart contract compiled with solc and deployed to the Ethereum blockchain with WEB3.
     Tested using mocha and ganache-cli.
 * Frontend: (eth-kickstrat/pages)
-    Next.js web application to interact with the contract thanks with WEB3.
+    Next.js web application to interact with the contract thanks to WEB3.
 
 ### Built with
 
