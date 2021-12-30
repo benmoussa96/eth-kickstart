@@ -56,7 +56,7 @@ This full stack decentralized application was built in context of the Udemy cour
     node deploy.js
     ```
 7. Copy the Factory address and paste in the /eth-kickstart/ethereum/factory.js file
-![alt text](https://github.com/benmoussa96/eth-kickstart/factory.png?raw=true)
+![alt text](https://github.com/benmoussa96/eth-kickstart/blob/master/factory.png?raw=true)
 
 ### Executing program
 
