@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Grid, Button, Header } from 'semantic-ui-react'
 import Layout from '../../components/Layout'
 import ContributeForm from '../../components/ContributeForm'
+import BackButton from '../../components/BackButton'
 import Campaign from '../../ethereum/campaign'
 import web3 from '../../ethereum/web3'
 import { Link } from '../../routes'
@@ -42,17 +43,24 @@ function CampaignhSow({ campaignAddress, minimumContribution, balance, requestsC
 
     return (
         <Layout>
-            <Header as='h3'>
-                Campaign Summary
-                <Header.Subheader>
-                    <Link route={`/campaigns/${campaignAddress}`}>
-                        <a>
-                            {campaignAddress}
-                        </a>
-                    </Link>
-                </Header.Subheader>
-            </Header>
-            <Grid>
+            <Grid columns="equal">
+                <Grid.Row>
+                    <Grid.Column width="2">
+                        <BackButton />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Header as='h3'>
+                            Campaign Summary
+                            <Header.Subheader>
+                                <Link route={`/campaigns/${campaignAddress}`}>
+                                    <a>
+                                        {campaignAddress}
+                                    </a>
+                                </Link>
+                            </Header.Subheader>
+                        </Header>
+                    </Grid.Column>
+                </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={12}>
                         {renderSummary()}
